@@ -1,0 +1,6 @@
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Delegate\bin\Debug\Delegate.exe.config
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Delegate\bin\Debug\Delegate.exe
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Delegate\bin\Debug\Delegate.pdb
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Delegate\obj\Debug\Delegate.csprojResolveAssemblyReference.cache
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Delegate\obj\Debug\Delegate.exe
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Delegate\obj\Debug\Delegate.pdb

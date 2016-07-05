@@ -1,0 +1,10 @@
+c:\users\lthutaaung573\documents\visual studio 2015\Projects\Playground\Yield\bin\Debug\Yield.exe.config
+c:\users\lthutaaung573\documents\visual studio 2015\Projects\Playground\Yield\bin\Debug\Yield.exe
+c:\users\lthutaaung573\documents\visual studio 2015\Projects\Playground\Yield\bin\Debug\Yield.pdb
+c:\users\lthutaaung573\documents\visual studio 2015\Projects\Playground\Yield\obj\Debug\Yield.csprojResolveAssemblyReference.cache
+c:\users\lthutaaung573\documents\visual studio 2015\Projects\Playground\Yield\obj\Debug\Yield.exe
+c:\users\lthutaaung573\documents\visual studio 2015\Projects\Playground\Yield\obj\Debug\Yield.pdb
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Yield\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Yield\bin\Debug\System.Collections.Immutable.dll
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Yield\bin\Debug\Newtonsoft.Json.xml
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Yield\bin\Debug\System.Collections.Immutable.xml

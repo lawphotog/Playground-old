@@ -1,0 +1,12 @@
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\bin\Debug\ActorModel.exe.config
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\bin\Debug\ActorModel.exe
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\bin\Debug\ActorModel.pdb
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\bin\Debug\Akka.dll
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\bin\Debug\System.Collections.Immutable.dll
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\bin\Debug\Akka.xml
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\bin\Debug\Newtonsoft.Json.xml
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\bin\Debug\System.Collections.Immutable.xml
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\obj\Debug\ActorModel.exe
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\obj\Debug\ActorModel.pdb
+C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\obj\Debug\ActorModel.csprojResolveAssemblyReference.cache
