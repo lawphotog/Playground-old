@@ -1,0 +1,6 @@
+D:\Github\Playground\Test\bin\Debug\Test.exe.config
+D:\Github\Playground\Test\bin\Debug\Test.exe
+D:\Github\Playground\Test\bin\Debug\Test.pdb
+D:\Github\Playground\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+D:\Github\Playground\Test\obj\Debug\Test.exe
+D:\Github\Playground\Test\obj\Debug\Test.pdb
