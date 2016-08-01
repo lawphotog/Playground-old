@@ -31,5 +31,7 @@ namespace Yield
             foreach (var o in list2)
                 yield return o;
         }
+
+        //rubbish
     }
 }
