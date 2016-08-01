@@ -3,3 +3,4 @@ D:\Github\Playground\TestArray\bin\Debug\TestArray.exe
 D:\Github\Playground\TestArray\bin\Debug\TestArray.pdb
 D:\Github\Playground\TestArray\obj\Debug\TestArray.exe
 D:\Github\Playground\TestArray\obj\Debug\TestArray.pdb
+D:\Github\Playground\TestArray\obj\Debug\TestArray.csprojResolveAssemblyReference.cache
