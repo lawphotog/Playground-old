@@ -21,6 +21,8 @@ namespace Yield
                 Console.WriteLine(o.GetType());
             }
 
+            //not rubbish
+
             Console.ReadLine();
         }
 
