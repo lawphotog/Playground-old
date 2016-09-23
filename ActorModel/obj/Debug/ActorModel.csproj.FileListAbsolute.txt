@@ -10,3 +10,15 @@ C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorMod
 C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\obj\Debug\ActorModel.exe
 C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\obj\Debug\ActorModel.pdb
 C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\ActorModel\obj\Debug\ActorModel.csprojResolveAssemblyReference.cache
+D:\Github\Playground\ActorModel\bin\Debug\ActorModel.exe.config
+D:\Github\Playground\ActorModel\bin\Debug\ActorModel.exe
+D:\Github\Playground\ActorModel\bin\Debug\ActorModel.pdb
+D:\Github\Playground\ActorModel\bin\Debug\Akka.dll
+D:\Github\Playground\ActorModel\bin\Debug\Newtonsoft.Json.dll
+D:\Github\Playground\ActorModel\bin\Debug\System.Collections.Immutable.dll
+D:\Github\Playground\ActorModel\bin\Debug\Akka.xml
+D:\Github\Playground\ActorModel\bin\Debug\Newtonsoft.Json.xml
+D:\Github\Playground\ActorModel\bin\Debug\System.Collections.Immutable.xml
+D:\Github\Playground\ActorModel\obj\Debug\ActorModel.csprojResolveAssemblyReference.cache
+D:\Github\Playground\ActorModel\obj\Debug\ActorModel.exe
+D:\Github\Playground\ActorModel\obj\Debug\ActorModel.pdb

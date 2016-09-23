@@ -13,7 +13,7 @@ namespace AsyncCallback
 
         static void Main(string[] args)
         {
-            //TestCallbackAPM();
+            TestCallbackAPM();
             int i = 0;
 
             while (i <= 10000)

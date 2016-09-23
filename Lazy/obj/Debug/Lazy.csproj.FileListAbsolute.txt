@@ -4,5 +4,7 @@ C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Lazy\bin
 C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Lazy\obj\Debug\Lazy.exe
 C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Lazy\obj\Debug\Lazy.pdb
 D:\Github\Playground\Lazy\bin\Debug\Lazy.exe.config
+D:\Github\Playground\Lazy\bin\Debug\Lazy.exe
+D:\Github\Playground\Lazy\bin\Debug\Lazy.pdb
 D:\Github\Playground\Lazy\obj\Debug\Lazy.exe
 D:\Github\Playground\Lazy\obj\Debug\Lazy.pdb

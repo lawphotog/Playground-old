@@ -4,3 +4,9 @@ C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Delegate
 C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Delegate\obj\Debug\Delegate.csprojResolveAssemblyReference.cache
 C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Delegate\obj\Debug\Delegate.exe
 C:\Users\LThutaAung573\Documents\Visual Studio 2015\Projects\Playground\Delegate\obj\Debug\Delegate.pdb
+D:\Github\Playground\Delegate\bin\Debug\Delegate.exe.config
+D:\Github\Playground\Delegate\bin\Debug\Delegate.exe
+D:\Github\Playground\Delegate\bin\Debug\Delegate.pdb
+D:\Github\Playground\Delegate\obj\Debug\Delegate.csprojResolveAssemblyReference.cache
+D:\Github\Playground\Delegate\obj\Debug\Delegate.exe
+D:\Github\Playground\Delegate\obj\Debug\Delegate.pdb

@@ -10,28 +10,35 @@ namespace Yield
     {
         static void Main(string[] args)
         {
-            var list1 = new List<object> { new object[1], new object[2] };
-            var list2 = new List<object> { new object[3], new object[4] };
+
+            
+
+            var list1 = new List<Fruit> { new Fruit { Id = 1, Name = "Apple" }, new Fruit { Id = 2, Name = "Orange" } };
+            var list2 = new List<Fruit> { new Fruit { Id = 3, Name = "Pear" }, new Fruit { Id = 4, Name = "Strewberry" } };
 
             var prog = new Program();
-            var name = prog.EfficientMerge(list1, list2);
+            var names = prog.EfficientMerge(list1, list2);
 
-            foreach (var o in name)
+            foreach (var o in names)
             {
-                Console.WriteLine(o.GetType());
+                Console.WriteLine(o.Name);
             }
-
-            //not rubbish
-
+        
             Console.ReadLine();
         }
 
-        public IEnumerable<object> EfficientMerge(List<object> list1, List<object> list2)
+        public IEnumerable<Fruit> EfficientMerge(List<Fruit> list1, List<Fruit> list2)
         {
             foreach (var o in list1)
                 yield return o;
             foreach (var o in list2)
                 yield return o;
+        }
+
+        public class Fruit
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
         }
     }
 }
