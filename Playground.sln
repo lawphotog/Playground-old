@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallback", "AsyncCallb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActorModel", "ActorModel\ActorModel.csproj", "{04065FA3-687F-4B6B-B600-355977A09774}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mongo", "Mongo\Mongo.csproj", "{ADF48F1A-4116-4C09-983C-E3096E72E860}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{04065FA3-687F-4B6B-B600-355977A09774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04065FA3-687F-4B6B-B600-355977A09774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04065FA3-687F-4B6B-B600-355977A09774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF48F1A-4116-4C09-983C-E3096E72E860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF48F1A-4116-4C09-983C-E3096E72E860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF48F1A-4116-4C09-983C-E3096E72E860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF48F1A-4116-4C09-983C-E3096E72E860}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
