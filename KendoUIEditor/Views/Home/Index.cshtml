@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()    
+
+    <h1>Hello</h1>
+    
+    <textarea id="editor" name="editor" rows="10" cols="30" style="height:440px">        
+    </textarea>
+    
+    <a id="preview" class="btn btn-default">Preview</a>
+}
+
+<div id="previewtext">    
+    Your preview text<br />
+</div>
+
+<style type="text/css">
+
+    .blueBackground{
+        background-color: lightblue;
+    }
+
+</style>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#editor").kendoEditor();           
+            
+            $('#preview').click(function () {
+
+                var editor = $('#editor').data('kendoEditor');
+                var textstring = editor.value();
+                                
+                $('#previewtext').text(textstring);
+                                
+                $.ajax({
+                    type: 'POST',
+                    url: '/Home/examplePost',
+                    data: { str: textstring },
+                    success: function (returndata) {
+                        alert(returndata);
+                    },
+                    error: function (err) {
+                        alert(err.Message);
+                    }
+                });                
+
+            });
+        });
+    </script>
+}
+    

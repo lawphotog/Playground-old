@@ -1,0 +1,23 @@
+﻿
+<h1 class="app-name">Categories</h1>
+
+<div class="scrollable sidebar-scrollable" ng-controller="sidebarController">
+    <div class="scrollable-content">
+        
+        <div class="list-group" toggle="off" bubble target="mainSidebar">
+            <div ng-repeat="c in categories">
+                <a class="list-group-item" ng-click="GetItemsByCategory(c.Id)">{{ c.Name }}<i class="fa fa-chevron-right pull-right"></i></a>
+            </div>
+            
+            <div ng-repeat="l in lists">
+                <a class="list-group-item" ng-click="GetItemsByList(l.Id)">{{ l.Name }}<i class="fa fa-chevron-right pull-right"></i></a>
+            </div>
+        </div>
+        
+        <!--<ul class="list-group" toggle="off" bubble target="mainSidebar">
+                <li class="list-group-item"><a href="#/scroll">Scroll <i class="fa fa-chevron-right pull-right"></i></a></li>
+                <li class="list-group-item"><a href="#/toggle">Toggle <i class="fa fa-chevron-right pull-right"></i></a></li>
+            </ul>-->
+
+    </div>
+</div>

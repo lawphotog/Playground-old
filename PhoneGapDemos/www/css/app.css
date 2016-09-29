@@ -1,0 +1,28 @@
+﻿@font-face {
+                font-family: "Zawgyi-One-Embedded";
+                font-style: normal;
+                font-weight: normal;
+                src: url("../fonts/zawgyione-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/zawgyione-webfont.woff") format("woff"), url("../fonts/zawgyione-webfont.ttf") format("truetype"), url("") format("svg");
+            }
+
+body {
+    font-family: 'Zawgyi-One','Zawgyi1','Zawgyi-One-Embedded', 'zawgyi-one';
+}
+
+/*overriding mobile angular-ui classes*/
+
+.app {
+    background: white;   
+}
+
+.sidebar-left {
+    background: white;
+}
+
+.sidebar-right {
+    background: white;
+}
+
+.app-name {
+    color: #333;
+}

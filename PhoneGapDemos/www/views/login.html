@@ -1,0 +1,43 @@
+﻿<h1 class="app-name">Account</h1>
+
+<div class="scrollable" data-ng-controller="loginController">
+    <div class="scrollable-content">
+        <div class="list-group" toggle="on" bubble target="rightSidebar">
+
+            <div class="container">
+                <form class="form-group">
+
+                    <div ng-if="isAuthenticated">
+                        <h2>Welcome {{ username }}!</h2>
+                        
+                        <a data-ng-click="logout()" href="#">Logout</a>
+                    </div>
+
+                    <div ng-if="!isAuthenticated">
+                        
+                        <div>
+                            <h2>Login</h2>
+
+                            <input class="form-control" type="text" name="name" id="name" value="" data-ng-model="user.username" placeholder="username">
+                            <br />
+                            <input class="form-control" type="password" name="password" id="password" value="" data-ng-model="user.password" placeholder="password">
+
+                            <!--<a class="btn btn-default" href="#" ng-click="toggle('rightSidebar')">Cancel</a>-->
+                            <br />
+                            <a class="btn btn-default pull-right" href="#" id="login" data-ng-click="login(user)">Login</a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div>
+                            <h2>Register</h2>
+
+                            <a href="http://burmeselearner.com/b/User/Register">Register</a>
+
+                            <p>Registration needs to be done on our website</p>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

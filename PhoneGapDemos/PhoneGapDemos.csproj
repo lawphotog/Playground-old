@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB365C47-3B35-404F-9ACA-0535A0866946}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhoneGapDemos</RootNamespace>
+    <AssemblyName>PhoneGapDemos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".cordova\config.json" />
+    <Content Include="hooks\README.md" />
+    <Content Include="Web.config" />
+    <Content Include="www\css\toastr.css.map" />
+    <Content Include="www\css\toastr.less" />
+    <Content Include="www\css\toastr.scss" />
+    <Content Include="www\fonts\fontawesome-webfont.eot" />
+    <Content Include="www\fonts\fontawesome-webfont.ttf" />
+    <Content Include="www\fonts\fontawesome-webfont.woff" />
+    <Content Include="www\fonts\FontAwesome.otf" />
+    <Content Include="www\fonts\zawgyione-webfont.eot" />
+    <Content Include="www\fonts\zawgyione-webfont.ttf" />
+    <Content Include="www\fonts\zawgyione-webfont.woff" />
+    <Content Include="www\js\toastr.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="www\app\app.js" />
+    <Content Include="www\app\favouriteController.js" />
+    <Content Include="www\app\homeController.js" />
+    <Content Include="www\app\index.js" />
+    <Content Include="www\app\loginController.js" />
+    <Content Include="www\app\sidebarController.js" />
+    <Content Include="www\app\syncController.js" />
+    <Content Include="www\audios\2014-04-28 19-16-50.mp3" />
+    <Content Include="www\audios\2014-04-28 19-16-56.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-00.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-02.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-04.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-06.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-08.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-10.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-14.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-17.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-19.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-21.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-22.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-50.mp3" />
+    <Content Include="www\audios\2014-04-28 19-17-52.mp3" />
+    <Content Include="www\audios\2014-04-28 19-18-07.mp3" />
+    <Content Include="www\audios\2014-04-28 19-18-10.mp3" />
+    <Content Include="www\audios\2014-04-28 19-18-11.mp3" />
+    <Content Include="www\audios\2014-04-28 19-18-13.mp3" />
+    <Content Include="www\audios\2014-04-28 19-18-23.mp3" />
+    <Content Include="www\audios\2014-04-28 19-18-29.mp3" />
+    <Content Include="www\audios\2014-04-28 19-18-31.mp3" />
+    <Content Include="www\audios\2014-04-28 19-39-46.mp3" />
+    <Content Include="www\config.xml" />
+    <Content Include="www\css\app.css" />
+    <Content Include="www\css\mobile-angular-ui-base.css" />
+    <Content Include="www\css\mobile-angular-ui-base.min.css" />
+    <Content Include="www\css\mobile-angular-ui-desktop.css" />
+    <Content Include="www\css\mobile-angular-ui-desktop.min.css" />
+    <Content Include="www\css\toastr.css" />
+    <Content Include="www\css\toastr.min.css" />
+    <Content Include="www\fonts\fontawesome-webfont.svg" />
+    <Content Include="www\img\logo.png" />
+    <Content Include="www\index.html" />
+    <Content Include="www\js\angular-route.min.js" />
+    <Content Include="www\js\angular.min.js" />
+    <Content Include="www\js\jquery-2.1.1.min.js" />
+    <Content Include="www\js\mobile-angular-ui.js" />
+    <Content Include="www\js\mobile-angular-ui.min.js" />
+    <Content Include="www\js\toastr.js" />
+    <Content Include="www\js\toastr.min.js" />
+    <Content Include="www\res\screen\android\screen-hdpi-landscape.png" />
+    <Content Include="www\res\screen\android\screen-hdpi-portrait.png" />
+    <Content Include="www\res\screen\android\screen-ldpi-landscape.png" />
+    <Content Include="www\res\screen\android\screen-ldpi-portrait.png" />
+    <Content Include="www\res\screen\android\screen-mdpi-landscape.png" />
+    <Content Include="www\res\screen\android\screen-mdpi-portrait.png" />
+    <Content Include="www\res\screen\android\screen-xhdpi-landscape.png" />
+    <Content Include="www\res\screen\android\screen-xhdpi-portrait.png" />
+    <Content Include="www\views\favourites.html" />
+    <Content Include="www\views\home.html" />
+    <Content Include="www\views\login.html" />
+    <Content Include="www\views\sidebar.html" />
+    <Content Include="www\views\sync.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="merges\" />
+    <Folder Include="platforms\" />
+    <Folder Include="plugins\" />
+    <Folder Include="www\res\icon\android\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49296</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49296/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

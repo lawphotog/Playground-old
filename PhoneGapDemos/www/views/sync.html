@@ -1,0 +1,47 @@
+﻿<div data-ng-controller="syncController" class="container scrollable sidebar-scrollable">
+    <div class="scrollable-content">
+        <h2>Sync</h2>
+
+        <a href="#" ng-click="getLocation()">geolocation test</a>
+        <br /><br />
+        <a href="#" ng-click="vibrate()">vibrate</a>
+        <br /><br />
+        <a href="#" ng-click="beep()">beep</a>
+        <br /><br />
+        <a href="#" ng-click="takePicture()">test camera</a>
+        <br /><br />
+        <a href="#" ng-click="GetHeading()">compass test</a>
+        <br /><br />
+        <a href="#" ng-click="GetAlert()">Get alert</a>
+        <br /><br />
+        <a href="#" ng-click="OpenBrowser()">Open Browser</a>
+        <br /><br />
+        <a href="#" ng-click="watchHeading()">Watch heading</a>
+        <br /><br />
+        <a href="#" ng-click="stopwatch()">Stop watch compass</a>
+        <br /><br />
+        <a href="" ng-click="getdeviceinfo()">Get Device Info</a>
+        <br /><br />
+        <a href="#" ng-click="toggleflashlight()">Flash light</a>
+        <br /><br />
+        <a href="#" ng-click="GetFile()">Get File</a>
+        <br /><br />
+        <a href="#" ng-click="exit()">Exit</a>
+        <br /><br />
+        <!--DropDown test-->
+        <div class="btn-group toggleable-dropdown" active-class="open" id="myDropdown" toggleable>
+            <button type="button" class="btn btn-default dropdown-toggle" toggle target="myDropdown">
+                <i class="fa fa-gear"></i> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" toggle="off" bubble target="myDropdown">
+                <li><a href>Action</a></li>
+                <li><a href>Another action</a></li>
+                <li><a href>Something else here</a></li>
+                <li class="divider">
+                <li><a href>Separated link</a></li>
+            </ul>
+        </div>
+
+        <img id="myImage" src="" />
+    </div>
+</div>

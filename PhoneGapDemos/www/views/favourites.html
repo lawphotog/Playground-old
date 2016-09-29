@@ -1,0 +1,59 @@
+﻿<div class="container scrollable sidebar-scrollable" data-ng-controller="favouriteController">
+    <div class="scrollable-content">
+        
+        <h2>Favourites</h2>
+
+        <div ng-if="!isAuthenticated">
+
+            <p>You need to login or register to use this feature.</p>
+
+        </div>
+
+        <div ng-if="isAuthenticated">
+
+            <div>
+                <h4>Lists</h4>
+                <p ng-show="!lists.length">no list</p>
+                <ul data-ng-repeat="l in lists" class="list-group">
+
+                    <li class="list-group-item">
+                        <a href="#" ng-click="GetItemsByList(l.Id)">{{ l.Name }}</a>
+                        <a href="#" ng-click="RenameList(l.Id)">Rename</a> |
+                        <a href="#" ng-click="DeleteList(l.Id)">Delete</a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+
+            <div>
+                <div class="scrollable-content">
+
+                    <p ng-show="!lists.length">no items</p>
+                    <ul class="list-group" data-ng-repeat="it in items">
+                        <li class="list-group-item">
+                            <div style="float: left">
+                                <h4>{{ it.English }}</h4>
+                                <p>{{ it.Myanmar }}</p>
+                                <p>{{ it.Myanglish }}</p>
+                            </div>
+
+                            <div style="float: right" ng-if="it.FileName.length>0">
+
+                                <a href="#" data-ng-click="playAudio(it.FileName)">
+                                    <i style="font-size: x-large" class="fa fa-play-circle-o"></i>
+                                </a>
+
+                            </div>
+                            <div style="clear: both"></div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

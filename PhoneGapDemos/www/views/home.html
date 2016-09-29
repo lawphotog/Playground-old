@@ -1,0 +1,50 @@
+﻿<div class="container scrollable sidebar-scrollable" ng-controller="homeController">
+    <div class="scrollable-content">
+        
+        <ul class="list-group" data-ng-repeat="it in items">
+            <li class="list-group-item">
+                <div style="float: left">
+                    <h4>{{ it.English }}</h4>
+                    <p>{{ it.Myanmar }}</p>
+                    <p>{{ it.Myanglish }}</p>
+                </div>
+
+                <div style="float: right">
+                    <!--<div ng-repeat="o in userLists">
+                        {{ o.Name }}<br />
+                    </div>-->
+                    <!--<a href="#" data-ng-click="toggle('myOverlay', 'on')">
+                        <i style="font-size: x-large" class="fa fa-heart"></i>
+                    </a>-->
+
+                    <a href="#" data-ng-click="playAudio(it.FileName)" ng-if="it.FileName.length>0">
+                        <i style="font-size: x-large" class="fa fa-play-circle-o"></i>
+                    </a>
+
+                </div>
+                <div style="clear: both"></div>
+            </li>
+        </ul>
+
+        <!--<div overlay="myOverlay">
+            <h4 class="overlay-title">Add to list</h4>
+            
+            <div ng-repeat="o in userLists">
+                {{ o.Name }}<br />
+            </div>
+
+            <select ng-repeat="o in userLists">
+                <option>{{ o.Name }}</option>
+            </select>
+
+            <br /><br />
+
+            <p toggle="off" bubble target="myOverlay">
+                <span class="btn btn-primary">Ok</span>
+                <span class="btn btn-default">Cancel</span>
+            </p>
+        </div>-->
+
+    </div>
+</div>
+
