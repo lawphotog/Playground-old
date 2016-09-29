@@ -1,0 +1,10 @@
+﻿
+<br /><br />
+
+<div ng-controller="UploadCtrl">
+    @*<input type="file" ng-file-select="onFileSelect($files)" multiple>*@
+    <input type="file" ng-file-select="onFileSelect($files)">
+    <a href="#" ng-click="uploadClick($files)">Upload</a>
+
+    @Html.ActionLink("Hello", "Test")
+</div>

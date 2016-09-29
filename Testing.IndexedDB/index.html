@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <link href="content/jquery.mobile-1.4.2.css" rel="stylesheet" />
+    <link href="content/toastr.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div data-role="page">
+
+        <ul id="todoItems"></ul>
+        <input type="text" id="todo" name="todo"
+               placeholder="What do you need to do?" style="width: 200px;" />
+        <input type="submit" value="Add Todo Item"
+               onclick="addTodo(); return false;" />
+
+
+    </div>
+
+    <script src="Scripts/jquery-2.1.0.min.js"></script>
+    <script src="Scripts/jquery.mobile-1.4.2.min.js"></script>
+    <script src="Scripts/toastr.min.js"></script>
+    <script src="App/todo.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="kendo.default.min.css" rel="stylesheet" />
+    <link href="kendo.common.min.css" rel="stylesheet" />
+
+    <title>SignalR Simple Chat</title>
+    <style type="text/css">
+                .demo-section {
+            text-align: center;
+        }
+
+        #equalizer {
+            padding-right: 15px;
+        }
+
+        div.balSlider {
+            width: 100%;
+        }
+
+        div.balSlider .k-slider-selection {
+            display: none;
+        }
+
+        div.eqSlider {
+            display: inline-block;
+            margin: 1em;
+            height: 122px;
+            vertical-align: top;
+        }
+
+        .k-ie7 div.eqSlider {display:inline;zoom:1;}
+    </style>
+</head>
+<body>
+    <div class="demo-section k-header">        
+        <input id="slider" class="balSlider" value="0" />        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.0.js"></script>
+    <script src="Scripts/kendo.all.js"></script>
+    <script src="signalr/hubs"></script>
+
+    <script>
+        $(function () {
+            var chart = $.connection.chart;
+
+            $.connection.hub.start().done(function () {
+                chart.server.send(0);
+            });
+
+            var slider = $("#slider").kendoSlider({
+                slide: sliderOnSlide,
+                change: sliderOnSlide,
+                increaseButtonTitle: "Right",
+                decreaseButtonTitle: "Left",
+                min: 0,
+                max: 400,
+                smallStep: 2,
+                largeStep: 50,
+                showButtons: false
+            }).data("kendoSlider");
+
+            function sliderOnSlide(e) {
+                console.log(e.value);
+                chart.server.send(e.value);
+            }
+        });
+        
+    </script>
+
+</body>
+</html>

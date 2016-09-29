@@ -1,0 +1,30 @@
+﻿<br /><br /><br />
+
+<script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+
+<form id="checkout" method="post" action="/Home/CreatePurchase">
+    <div id="paypal-container"></div>
+</form>
+
+
+<script type="text/javascript">
+    braintree.setup("@ViewBag.clientToken", "paypal", {
+        container: "paypal-container",
+        singleUse: true,
+        amount: 10.00,
+        //currency: 'USD',
+        onPaymentMethodReceived: function (obj) {
+
+            doSomethingWithTheNonce(obj.nonce);
+        }
+    });
+
+    function doSomethingWithTheNonce(nonce) {
+
+        console.log('In doSomethingWithTheNonce');
+
+        $('#checkout').submit();
+
+    }
+
+</script>
