@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DurhamUniEf.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DurhamUniEfStoreContainer">
+    <EntitySet Name="Students" EntityType="DurhamUniEf.Store.Students" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Courses" EntityType="DurhamUniEf.Store.Courses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Modules" EntityType="DurhamUniEf.Store.Modules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CourseModule" EntityType="DurhamUniEf.Store.CourseModule" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="StudentCourse" Association="DurhamUniEf.Store.StudentCourse">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Course" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseModule_Course" Association="DurhamUniEf.Store.FK_CourseModule_Course">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="CourseModule" EntitySet="CourseModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseModule_Module" Association="DurhamUniEf.Store.FK_CourseModule_Module">
+      <End Role="Module" EntitySet="Modules" />
+      <End Role="CourseModule" EntitySet="CourseModule" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CourseId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Courses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modules">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CourseModule">
+    <Key>
+      <PropertyRef Name="Courses_Id" />
+      <PropertyRef Name="Modules_Id" />
+    </Key>
+    <Property Name="Courses_Id" Type="int" Nullable="false" />
+    <Property Name="Modules_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="StudentCourse">
+    <End Role="Student" Type="DurhamUniEf.Store.Students" Multiplicity="*" />
+    <End Role="Course" Type="DurhamUniEf.Store.Courses" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseModule_Course">
+    <End Role="Course" Type="DurhamUniEf.Store.Courses" Multiplicity="1" />
+    <End Role="CourseModule" Type="DurhamUniEf.Store.CourseModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CourseModule">
+        <PropertyRef Name="Courses_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseModule_Module">
+    <End Role="CourseModule" Type="DurhamUniEf.Store.CourseModule" Multiplicity="*" />
+    <End Role="Module" Type="DurhamUniEf.Store.Modules" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CourseModule">
+        <PropertyRef Name="Modules_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DurhamUniEf" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="DurhamUniEfContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Students" EntityType="DurhamUniEf.Student" />
+          <EntitySet Name="Courses" EntityType="DurhamUniEf.Course" />
+          <AssociationSet Name="StudentCourse" Association="DurhamUniEf.StudentCourse">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Course" EntitySet="Courses" />
+          </AssociationSet>
+          <EntitySet Name="Modules" EntityType="DurhamUniEf.Module" />
+          <AssociationSet Name="CourseModule" Association="DurhamUniEf.CourseModule">
+            <End Role="Course" EntitySet="Courses" />
+            <End Role="Module" EntitySet="Modules" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Course" Relationship="DurhamUniEf.StudentCourse" FromRole="Student" ToRole="Course" />
+          <Property Type="Int32" Name="CourseId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Course">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" Nullable="false" />
+          <NavigationProperty Name="Students" Relationship="DurhamUniEf.StudentCourse" FromRole="Course" ToRole="Student" />
+          <NavigationProperty Name="Modules" Relationship="DurhamUniEf.CourseModule" FromRole="Course" ToRole="Module" />
+        </EntityType>
+        <Association Name="StudentCourse">
+          <End Type="DurhamUniEf.Student" Role="Student" Multiplicity="*" />
+          <End Type="DurhamUniEf.Course" Role="Course" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Module">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Courses" Relationship="DurhamUniEf.CourseModule" FromRole="Module" ToRole="Course" />
+        </EntityType>
+        <Association Name="CourseModule">
+          <End Type="DurhamUniEf.Course" Role="Course" Multiplicity="*" />
+          <End Type="DurhamUniEf.Module" Role="Module" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DurhamUniEfStoreContainer" CdmEntityContainer="DurhamUniEfContainer">
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="IsTypeOf(DurhamUniEf.Student)">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="IsTypeOf(DurhamUniEf.Course)">
+        <MappingFragment StoreEntitySet="Courses">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="IsTypeOf(DurhamUniEf.Module)">
+        <MappingFragment StoreEntitySet="Modules">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CourseModule" TypeName="DurhamUniEf.CourseModule" StoreEntitySet="CourseModule">
+      <EndProperty Name="Course">
+        <ScalarProperty Name="Id" ColumnName="Courses_Id" />
+      </EndProperty>
+      <EndProperty Name="Module">
+        <ScalarProperty Name="Id" ColumnName="Modules_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

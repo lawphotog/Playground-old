@@ -1,0 +1,25 @@
+﻿@model IEnumerable<DurhamUniversity.Course>
+
+@{
+    Layout = null;
+ }
+
+@*@foreach (var item in Model) {    
+    <div>
+        @Html.DisplayFor(modelItem => item.Title)             
+    </div>   
+}*@
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    
+    @Html.DropDownList("CourseId", (SelectList)ViewBag.Courses)
+
+    <input type="submit" value="Search" />
+    
+}
+
+
+
+

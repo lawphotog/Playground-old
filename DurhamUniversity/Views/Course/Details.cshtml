@@ -1,0 +1,52 @@
+﻿@model DurhamUniversity.Course
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    
+    <h3>@Html.DisplayFor(model => model.Title)</h3>
+
+    <div class="display-field">
+        <table>
+            <tr>
+                <th>Modules in this course</th>
+            </tr>
+            @foreach (var item in Model.Modules)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(m => item.Name)
+                    </td>
+                </tr>
+                
+            }
+        </table>
+    </div>
+
+    <div class="display-field">
+        <table>
+            <tr>
+                <th>
+                    Students in this course
+                </th>
+            </tr>
+            @foreach(var item in Model.Students)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(s => item.Name)
+                    </td>
+                </tr>    
+            }
+        </table>
+    </div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
