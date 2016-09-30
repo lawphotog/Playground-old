@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Info>
+  <Persons>
+    <Person>
+      <FirstName> Dino </FirstName>
+      <LastName> Esposito </LastName>
+    </Person>
+    <Person>
+      <FirstName> John </FirstName>
+      <LastName> Smith </LastName>
+    </Person>
+  </Persons>
+  
+  <Settings>
+    <Output Format="{0}, {1}" Params="LastName, FirstName" /> 
+  </Settings>
+</Info>
+

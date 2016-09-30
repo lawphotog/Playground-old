@@ -1,0 +1,21 @@
+﻿@model WebApplication1.Models.Customer
+
+<br />
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @id = "NewForm" }))
+{
+    @Html.ValidationSummary(true)
+    
+    @:Tom is in the database
+    <br />
+    @Html.EditorFor(m => m.Name)
+    @Html.ValidationMessageFor(m => m.Name)
+    
+    <br />
+    
+    @Html.EditorFor(m => m.City)
+    @Html.ValidationMessageFor(m => m.City)
+    
+    <br />
+    <input type="submit" value="Submit" />
+}

@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<br /><br />
+
+<a id="dialog1" class="btn btn-default">Dialog1</a>
+
+<a id="dialog2" class="btn btn-default">Dialog2</a>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" id="modalContainer">
+    </div>
+</div>
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(function () {            
+
+            $('#dialog1').on('click', function () {                
+                                
+                var url = "/Home/Dialog1";
+
+                $.get(url, function (data) {
+
+                    $('#modalContainer').html(data);
+                    $('#myModal').modal('show');
+
+                })
+                .fail(function () {
+                    toastr.info('failed');
+                });
+
+            });
+                        
+            $('#dialog2').on('click', function () {               
+
+                var url = "/Home/Dialog2";
+
+                $.get(url, function (data) {
+
+                    $('#modalContainer').html(data);
+                    $('#myModal').modal('show');
+
+                })
+                .fail(function () {
+                    toastr.info('failed');
+                });
+
+            });
+
+        });
+
+    </script>
+
+}

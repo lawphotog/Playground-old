@@ -1,0 +1,37 @@
+﻿@model WebApplication1.Models.FoobarVm
+
+@using(Html.BeginForm())
+{
+    <div>
+        @Html.EditorFor(x => x.Foo)
+        @Html.ValidationMessageFor(x => x.Foo)
+    </div>
+    
+    <div>
+        @Html.EditorFor(x => x.Bar)
+        @Html.ValidationMessageFor(x => x.Bar)
+    </div>
+    
+    <button type="submit">Ok</button>
+}
+
+@section scripts{
+    <script type="text/javascript">
+
+        $(function () {
+            $('#Bar').rules('add', {                          
+                remote: function () {
+                    var r = {
+                        url: '/Home/BarMustBeBar?str=' + $('#Bar').val(),
+                        type: 'GET',
+                        dataType: 'json',
+                        contentType: 'application/json; charset=utf-8',
+                        cache: false
+                    };
+                    return r;
+                }
+            });
+        });
+
+    </script>
+}

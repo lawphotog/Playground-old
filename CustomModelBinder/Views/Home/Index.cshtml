@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Person</h1>
+
+@using (Html.BeginForm("ComposePerson", "Home"))
+{
+    <div class="form-group">
+        
+        <input type="text" name="Name" class="form-control" />
+       
+        <input type="text" name="DateOfBirth" class="form-control" />
+        
+        <input type="text" name="EmployeeId" class="form-control" />
+        
+        <input type="text" name="DepartmentId" class="form-control" />
+        
+        <input type="submit" value="Submit">
+    </div>
+    
+    
+}
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        //$(function () {
+
+        //    var name = "John";
+        //    var isvalid = validateName(name);
+
+        //    alert(isvalid);
+
+            
+
+
+        //});
+
+        //function validateName(username) {
+        //    if (username == "John") {
+        //        return true;
+        //    } else {
+        //        return false;
+        //    }
+        //}
+
+    </script>
+
+}

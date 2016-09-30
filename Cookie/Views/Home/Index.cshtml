@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<br /><br />
+<br /><br /><br /><br />
+@ViewBag.saveName
+
+@using (@Html.BeginForm("SaveName", "Home"))
+{
+    <input type="text" name="userName" />
+
+    <input type="submit" value="Save" class="btn btn-default" />
+}
+
+<hr/>
+
+@using (Html.BeginForm("Delete", "Home"))
+{
+    <input type="submit" value="Delete" class="btn btn-danger" />
+}

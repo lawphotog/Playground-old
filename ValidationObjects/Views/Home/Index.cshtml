@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ValidationObjects.Controllers.HomeController.ValidationError>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach (var item in Model)
+{
+
+
+    <p>@Html.Raw(@item.Message)</p>
+
+
+
+
+
+
+}

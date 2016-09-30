@@ -1,0 +1,50 @@
+﻿@model WebApplication1.Models.MyViewModel
+
+<br /><br /><br />
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x => x.AssignedDate)
+    @Html.EditorFor(x => x.AssignedDate)
+    @Html.ValidationMessageFor(x => x.AssignedDate)
+    <br />
+    <button type="submit">OK</button>
+}
+
+@section scripts{
+<script type="text/javascript">
+    (function ($) {
+        var parseDate = function (str) {
+            var m = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+            return (m) ? new Date(m[3], m[1] - 1, m[2]) : null;
+        };
+
+        $.validator.addMethod('futuredate', function (value, element, param) {
+            if (!value) return false;
+
+            var min = parseDate(param.min);
+            var max = parseDate(param.max);
+            var current = parseDate(value);
+
+            if (min == null || max == null || current == null) {
+                return false;
+            }
+
+            return (current >= min && current <= max);
+        });
+
+        $.validator.unobtrusive.adapters.add('futuredate', ['min', 'max'], function (options) {
+            var params = {
+                min: options.params.min,
+                max: options.params.max
+            };
+
+            options.rules['futuredate'] = params;
+            if (options.message) {
+                options.messages['futuredate'] = options.message;
+            }
+        });
+    }(jQuery));
+</script>
+}
+
