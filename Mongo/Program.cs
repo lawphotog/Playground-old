@@ -15,20 +15,13 @@ namespace Mongo
             //persist fruits
             var client = new MongoClient("mongodb://localhost/?w=1");
 
-            var database = client.GetDatabase("test");
+            IMongoDatabase database = client.GetDatabase("test");
 
-            var collection = database.GetCollection<BsonDocument>("fruits");
-
-            var document = new BsonDocument
-            {
-                { "Name", "apple" }
-            };
-
-            collection.InsertOne(document);
-
-            var objectId = document["_id"].ToString();
-
+            IMongoCollection<Fruit> collection = database.GetCollection<Fruit>("fruits");
             
+            var fruit = new Fruit { Name = "apple" };
+
+            collection.InsertOne(fruit);            
         }
 
         public IEnumerable<Fruit> Fruits { get; set; }
