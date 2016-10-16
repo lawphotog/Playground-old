@@ -21,7 +21,16 @@ namespace Mongo
             
             var fruit = new Fruit { Name = "apple" };
 
-            collection.InsertOne(fruit);            
+            collection.InsertOne(fruit);
+
+            var col = collection.Find(new BsonDocument()).ToList();
+
+            foreach(var item in col)
+            {
+                Console.WriteLine(item.Id + " : " + item.Name);
+            }
+
+            Console.ReadLine();  
         }
 
         public IEnumerable<Fruit> Fruits { get; set; }
@@ -30,16 +39,16 @@ namespace Mongo
         {
             return new List<Fruit>
             {
-                new Fruit { Id = 1, Name = "apple" },
-                new Fruit { Id = 2, Name = "orange" },
-                new Fruit { Id = 3, Name = "pear" },
-                new Fruit { Id = 4, Name = "strewberry" },
+                new Fruit { Name = "apple" },
+                new Fruit { Name = "orange" },
+                new Fruit { Name = "pear" },
+                new Fruit { Name = "strewberry" },
             };
         }
 
         public class Fruit
         {
-            public int Id { get; set; }
+            public ObjectId Id { get; set; }
             public string Name { get; set; }
         }
     }
